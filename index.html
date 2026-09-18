@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aust Media – sosiale medier, video og nettsider</title>
+<meta name="description" content="Aust Media lager innhold for bedrifter: reels og innlegg til sosiale medier, foto, video og reklamefilm, nettsider og annonser. Basert i Bodø.">
+<meta property="og:title" content="Aust Media">
+<meta property="og:description" content="Sosiale medier, video og nettsider.">
+<meta property="og:image" content="/media/golf-poster.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1A1A; --body:#3D3D3D; --muted:#5C5C5C; --line:#DDDDDD;
+    --bg:#FFFFFF; --bg-soft:#F6F6F4; --accent:#15803D; --accent-light:#4ADE80;
+    --pad:120px; --maxw:1200px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Montserrat","Helvetica Neue",Helvetica,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+  img,video{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-weight:500;letter-spacing:-0.01em;margin:0}
+  p{margin:0;line-height:1.75;color:var(--body)}
+  section{padding:90px var(--pad)}
+  .wrap{max-width:var(--maxw);margin:0 auto}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:4px;font-size:16px;font-weight:600;border:0;cursor:pointer}
+  .btn-light{background:#fff;color:var(--ink)}
+  .btn-accent{background:var(--accent);color:#fff}
+
+  /* HERO */
+  .hero{position:relative;min-height:88vh;display:flex;flex-direction:column;padding:0;overflow:hidden}
+  .hero-media{position:absolute;inset:0}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .hero-media::after{content:"";position:absolute;inset:0;background:rgba(15,20,28,.22)}
+  .nav{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px var(--pad)}
+  .nav img{height:64px;width:auto}
+  .nav ul{display:flex;gap:36px;list-style:none;margin:0;padding:0;font-size:17px;color:#fff}
+  .hero-inner{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;color:#fff;gap:18px;padding:0 24px 96px}
+  .hero-inner h1{font-size:clamp(44px,7vw,104px);font-weight:400;line-height:1.02}
+  .hero-inner p{color:#fff;font-size:clamp(17px,2.4vw,30px);letter-spacing:.08em;padding-left:.08em}
+
+  /* INTRO */
+  .intro{text-align:center}
+  .intro .wrap{max-width:820px;display:flex;flex-direction:column;gap:22px;align-items:center}
+  .intro h2{font-size:clamp(30px,4vw,48px)}
+  .intro p{font-size:clamp(16px,1.6vw,20px)}
+
+  /* SERVICES */
+  .services{background:var(--bg-soft)}
+  .services h2{font-size:clamp(30px,4vw,48px);text-align:center;margin-bottom:48px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .card{background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .card .media{position:relative;overflow:hidden;min-height:0;aspect-ratio:16/10;background:#1A1A1A}
+  .card .media img,.card .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .card .body{padding:30px;display:flex;flex-direction:column;gap:12px}
+  .card h3{font-size:24px;font-weight:600}
+  .card p{font-size:16px}
+  .featured{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:#fff;border-radius:6px;overflow:hidden}
+  .featured .media{position:relative;overflow:hidden;height:100%;min-height:340px;background:#1A1A1A}
+  .featured .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .featured .body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .featured h3{font-size:clamp(26px,3vw,34px);font-weight:600}
+  .featured p{font-size:17px}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;padding-top:6px}
+  .tags span{padding:8px 14px;background:var(--bg-soft);border-radius:20px;font-size:14px;font-weight:500}
+
+  /* FILM */
+  .film{background:var(--ink);color:#fff}
+  .film .wrap{display:grid;grid-template-columns:1fr minmax(0,420px);gap:64px;align-items:center}
+  .film h2{font-size:clamp(30px,4vw,52px);line-height:1.15}
+  .film p{color:#C9C9C9;font-size:18px}
+  .film .tags span{background:transparent;border:1px solid #3A3A3A;color:#fff}
+  .film video{width:100%;border-radius:10px;background:#000}
+
+  /* SPLIT */
+  .split .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+  .split h2{font-size:clamp(28px,3.4vw,44px)}
+  .split p{font-size:18px}
+  .split .media{position:relative;border-radius:6px;overflow:hidden;background:#1A1A1A;aspect-ratio:4/5}
+  .split .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .split .text{display:flex;flex-direction:column;gap:20px}
+  .steps{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .steps div{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .steps b{min-width:100px;font-weight:600;font-size:17px}
+  .steps span{font-size:16px;color:var(--body)}
+
+  /* KUNDER */
+  .kunder{background:var(--bg-soft);text-align:center}
+  .kunder h2{font-size:clamp(28px,3.4vw,44px);margin-bottom:36px}
+  .kunder .grid3 > div{padding:24px;background:#fff;border-radius:6px;font-size:18px;font-weight:500}
+
+  /* PROSJEKTER */
+  .prosjekter h2{font-size:clamp(28px,3.4vw,44px);text-align:center;margin-bottom:44px}
+  figure{margin:0;display:flex;flex-direction:column;gap:10px}
+  figure .media{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:#1A1A1A}
+  figure .media img,figure .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  figcaption{font-size:15px;color:var(--body)}
+
+  /* KONTAKT */
+  .kontakt{background:var(--bg-soft)}
+  .kontakt .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
+  .kontakt h2{font-size:clamp(28px,3.4vw,44px);line-height:1.25}
+  .info{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:12px}
+  .info div{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .info span:first-child{color:var(--muted)}
+  .info b{font-weight:600;font-size:18px}
+  form{background:#fff;border-radius:6px;padding:clamp(24px,3vw,42px);display:flex;flex-direction:column;gap:16px}
+  label{font-size:14px;font-weight:500;display:flex;flex-direction:column;gap:8px}
+  input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #D4D4D4;border-radius:4px;background:#fff;width:100%}
+  .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+
+  footer{background:var(--ink);color:#BDBDBD;padding:32px var(--pad);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:1100px){
+    :root{--pad:56px}
+    .film .wrap,.split .wrap,.kontakt .wrap{grid-template-columns:1fr;gap:36px}
+    .film video{max-width:420px;margin:0 auto}
+    .split .media{aspect-ratio:16/10}
+  }
+  @media (max-width:760px){
+    :root{--pad:20px}
+    section{padding:56px var(--pad)}
+    .nav ul{display:none}
+    .nav img{height:48px}
+    .grid3{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .featured{grid-template-columns:1fr}
+    .featured .media{min-height:220px;aspect-ratio:16/10}
+    .row{grid-template-columns:1fr}
+    .hero{min-height:78vh}
+    .hero-inner{padding-bottom:56px}
+  }
+  @media (max-width:460px){
+    .grid3{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-media"><img src="media/eirik-hero.jpg" alt="Eirik fra Aust Media på kaia i Bodø" fetchpriority="high"></div>
+  <nav class="nav">
+    <a href="#top"><img src="media/logo-hvit.png" alt="Aust Media"></a>
+    <ul>
+      <li><a href="#tjenester">Tjenester</a></li>
+      <li><a href="#film">Arbeid</a></li>
+      <li><a href="#prosjekter">Prosjekter</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="hero-inner">
+    <h1>Aust Media</h1>
+    <p>Sosiale medier, video og nettsider</p>
+    <a class="btn btn-light" href="#kontakt" style="margin-top:18px">Book en uforpliktende prat</a>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>Hva gjør et digitalt byrå?</h2>
+    <p>Noen bedrifter dukker alltid opp i feeden – med videoer folk faktisk ser ferdig og deler. Hva ligger egentlig bak?</p>
+    <p>Med Aust Media får du sosiale medier, video, nettside og annonser fra ett sted. Du slipper å koordinere flere leverandører, og kan bruke tiden på å drive bedriften.</p>
+  </div>
+</section>
+
+<section class="services" id="tjenester">
+  <div class="wrap">
+    <h2>Tjenester</h2>
+    <div class="grid3">
+
+      <article class="featured">
+        <div class="media">
+          <video src="media/some-loop.mp4" poster="media/some-loop-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="body">
+          <span class="eyebrow" style="color:var(--accent)">VÅR KJERNETJENESTE</span>
+          <h3>Sosiale medier</h3>
+          <p>Oppmerksomheten har flyttet seg til feeden – og det er der kundene dine bruker tiden sin. Vi lager reels og innlegg som stopper scrollingen, og kan ta over hele kontoen for deg.</p>
+          <p>Resultatet: flere visninger, en voksende følgerbase og en bedrift folk kjenner igjen før de i det hele tatt tar kontakt.</p>
+          <div class="tags"><span>Reels</span><span>Innlegg</span><span>Kontostyring</span><span>Instagram · TikTok · Facebook</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media"><img src="media/bts-kamera-poster.jpg" alt="Opptak med kamera hos kunde" loading="lazy"></div>
+        <div class="body"><h3>Foto, video og reklamefilm</h3><p>Reklamefilm og bilder som viser hvem dere er – produsert lokalt, klare til bruk på nett, i sosiale medier og i annonser.</p></div>
+      </article>
+
+      <article class="card">
+        <div class="media"><img src="media/gundersons-butikk2.jpg" alt="Kunder ser på plakat i butikk" loading="lazy"></div>
+        <div class="body"><h3>Nettsider</h3><p>Raske, moderne nettsider som du eier selv – bygget for å gi henvendelser, ikke bare se pene ut.</p></div>
+      </article>
+
+      <article class="card">
+        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på golfbanen" loading="lazy"></div>
+        <div class="body"><h3>Annonser</h3><p>Målrettede annonser på Meta og Google som når riktige folk i ditt område – og gjør følgere til kunder.</p></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="text" style="display:flex;flex-direction:column;gap:20px">
+      <span class="eyebrow" style="color:var(--accent-light)">UTVALGT ARBEID</span>
+      <h2>Reklamefilm for Bodø Golfklubb</h2>
+      <p>Fra idé til ferdig film: vi planla opptaket, filmet på banen gjennom dagen og klippet det sammen til en reel klubben kunne publisere direkte.</p>
+      <p>Samme film brukes både som annonse og som innhold på profilen – én produksjon, flere formål.</p>
+      <div class="tags"><span>Konsept</span><span>Opptak</span><span>Klipp</span><span>Annonse</span></div>
+    </div>
+    <video src="media/golf-reel.mp4" poster="media/golf-poster.jpg" controls playsinline preload="none"></video>
+  </div>
+</section>
+
+<section class="split">
+  <div class="wrap">
+    <div class="text">
+      <h2>Vekstmotoren</h2>
+      <p>Vi jobber i fire steg, slik at hver krone du bruker på markedsføring har en plan bak seg.</p>
+      <div class="steps">
+        <div><b>Audit</b><span>Vi kartlegger hvor du står i dag.</span></div>
+        <div><b>Strategi</b><span>Vi legger en plan for hva som gir mest effekt.</span></div>
+        <div><b>Bygg</b><span>Nettside, innhold og kampanjer settes opp.</span></div>
+        <div><b>Skaler</b><span>Vi måler, justerer og trapper opp det som virker.</span></div>
+      </div>
+    </div>
+    <div class="media"><video src="media/bts-golf.mp4" poster="media/bts-golf-poster.jpg" autoplay muted loop playsinline preload="none"></video></div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="wrap">
+    <div class="media"><video src="media/bts-kamera.mp4" poster="media/bts-kamera-poster.jpg" autoplay muted loop playsinline preload="none"></video></div>
+    <div class="text">
+      <h2>Lokalt og personlig</h2>
+      <p>Vi holder til i Bodø og møter deg der bedriften din faktisk er. Da blir innholdet ekte, og det blir lettere å forstå hva kundene dine trenger.</p>
+      <p>Du får én kontaktperson som kjenner bedriften din – ikke et callsenter.</p>
+      <p>Nettsiden er din. Ingen innlåsing, ingen leiemodell du ikke kommer ut av.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kunder">
+  <div class="wrap">
+    <h2>Noen av våre kunder</h2>
+    <div class="grid3">
+      <div>Bodø Golfklubb</div>
+      <div>Gundersons</div>
+      <div>Hundefisk.no</div>
+      <div>HUD Klinikken</div>
+      <div>[Kunde 5]</div>
+      <div>[Kunde 6]</div>
+    </div>
+  </div>
+</section>
+
+<section class="prosjekter" id="prosjekter">
+  <div class="wrap">
+    <h2>Utvalgte prosjekter</h2>
+    <div class="grid3">
+      <figure>
+        <div class="media"><video src="media/gundersons-plakater.mp4" poster="media/gundersons-plakater-poster.jpg" autoplay muted loop playsinline preload="none"></video></div>
+        <figcaption>Gundersons – plakater i butikk</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><video src="media/hud-jens.mp4" poster="media/hud-poster.jpg" controls playsinline preload="none"></video></div>
+        <figcaption>HUD Klinikken – reklamefilm</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="media/barbershop.jpg" alt="Frisør klipper hår" loading="lazy"></div>
+        <figcaption>Barbershop – foto</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="media/gundersons-utenfor.jpg" alt="To kunder utenfor butikken" loading="lazy"></div>
+        <figcaption>Gundersons – utenfor butikken</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><video src="media/plakat-ute.mp4" poster="media/plakat-ute-poster.jpg" autoplay muted loop playsinline preload="none"></video></div>
+        <figcaption>Gundersons – plakat på vegg</figcaption>
+      </figure>
+      <figure>
+        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på green" loading="lazy"></div>
+        <figcaption>Bodø Golfklubb – fra banen</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="text" style="display:flex;flex-direction:column;gap:20px">
+      <h2>Vil du vite mer om hva vi kan gjøre for deg?</h2>
+      <p>Fortell kort om bedriften og hva du vil oppnå, så tar vi en uforpliktende prat.</p>
+      <div class="info">
+        <div><span>Telefon</span><a href="tel:+4741202192"><b>412 02 192</b></a></div>
+        <div><span>E-post</span><a href="mailto:post@austmedia.no"><b>post@austmedia.no</b></a></div>
+        <div><span>Instagram</span><a href="https://www.instagram.com/austmediaa/" target="_blank" rel="noopener"><b>@austmediaa</b></a></div>
+        <div><span>Sted</span><b>Bodø</b></div>
+      </div>
+    </div>
+
+    <!-- Bytt FORM_ID med din egen fra formspree.io, ellers sender ikke skjemaet noe -->
+    <form action="https://formspree.io/f/FORM_ID" method="POST">
+      <div class="row">
+        <label>Navn<input type="text" name="navn" required></label>
+        <label>Bedrift<input type="text" name="bedrift"></label>
+      </div>
+      <div class="row">
+        <label>E-post<input type="email" name="epost" required></label>
+        <label>Telefon<input type="tel" name="telefon"></label>
+      </div>
+      <label>Hva er du interessert i?
+        <select name="tjeneste">
+          <option>Sosiale medier</option>
+          <option>Foto, video og reklamefilm</option>
+          <option>Nettside</option>
+          <option>Annonser</option>
+          <option>Usikker – vil ha en prat</option>
+        </select>
+      </label>
+      <label>Melding<textarea name="melding" rows="5"></textarea></label>
+      <button class="btn btn-accent" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Copyright © 2026 Aust Media</span>
+    <span>Org.nr 931 606 107</span>
+  </div>
+</footer>
+
+</body>
+</html>
