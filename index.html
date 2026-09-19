@@ -112,9 +112,11 @@
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   /* MARQUEE */
-  .marquee{padding:36px 0;background:var(--bg-soft);overflow:hidden;
+  .marquee{padding:56px 0;background:var(--bg-soft);overflow:hidden;
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .marquee-title{text-align:center;font-size:clamp(20px,2.2vw,28px);
+    font-weight:500;color:var(--muted);margin:0 0 28px}
   .marquee-track{display:flex;width:max-content;animation:scroll 34s linear infinite}
   .marquee:hover .marquee-track{animation-play-state:paused}
   .marquee-list{display:flex;align-items:center;gap:clamp(32px,5vw,72px);
@@ -171,6 +173,7 @@
 </header>
 
 <section class="marquee" aria-label="Våre kunder">
+  <h2 class="marquee-title">Bedrifter vi jobber med</h2>
   <div class="marquee-track">
     <ul class="marquee-list">
       <li>Bodø Golfklubb</li><li>Gundersons</li><li>Hundefisk</li>
