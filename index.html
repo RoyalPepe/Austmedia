@@ -124,6 +124,7 @@
     font-weight:600;color:var(--ink);display:flex;align-items:center;gap:14px}
   .marquee-list li img{height:clamp(24px,2.4vw,32px);max-width:100px;
     width:auto;display:block;object-fit:contain}
+  .marquee-list li img.boxed{height:clamp(17px,1.8vw,23px);max-width:80px}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
@@ -175,12 +176,12 @@
   <div class="marquee-track">
     <ul class="marquee-list">
       <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><span>HUD Klinikken Bodø</span></li><li><img src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
+      <li><span>HUD Klinikken Bodø</span></li><li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
       <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
     </ul>
     <ul class="marquee-list" aria-hidden="true">
       <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><span>HUD Klinikken Bodø</span></li><li><img src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
+      <li><span>HUD Klinikken Bodø</span></li><li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
       <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
     </ul>
   </div>
