@@ -88,11 +88,6 @@
   .steps b{min-width:100px;font-weight:600;font-size:17px}
   .steps span{font-size:16px;color:var(--body)}
 
-  /* KUNDER */
-  .kunder{background:var(--bg-soft);text-align:center}
-  .kunder h2{font-size:clamp(28px,3.4vw,44px);margin-bottom:36px}
-  .kunder .grid3 > div{padding:24px;background:#fff;border-radius:6px;font-size:18px;font-weight:500}
-
   /* PROSJEKTER */
   .prosjekter h2{font-size:clamp(28px,3.4vw,44px);text-align:center;margin-bottom:44px}
   figure{margin:0;display:flex;flex-direction:column;gap:10px}
@@ -115,6 +110,19 @@
 
   footer{background:var(--ink);color:#BDBDBD;padding:32px var(--pad);font-size:14px}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* MARQUEE */
+  .marquee{padding:28px 0;background:var(--bg-soft);overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .marquee-track{display:flex;width:max-content;animation:scroll 34s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-list{display:flex;align-items:center;gap:clamp(32px,5vw,72px);
+    list-style:none;margin:0;padding:0 clamp(16px,2.5vw,36px)}
+  .marquee-list li{white-space:nowrap;font-size:clamp(16px,1.6vw,20px);
+    font-weight:500;color:var(--body)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
   @media (max-width:1100px){
     :root{--pad:56px}
@@ -158,6 +166,21 @@
     <a class="btn btn-light" href="#kontakt" style="margin-top:18px">Book en uforpliktende prat</a>
   </div>
 </header>
+
+<section class="marquee" aria-label="Våre kunder">
+  <div class="marquee-track">
+    <ul class="marquee-list">
+      <li>Bodø Golfklubb</li><li>Gundersons</li><li>Hundefisk</li>
+      <li>HUD Klinikken Bodø</li><li>Blendzz</li><li>Bikemill</li>
+      <li>Lykke Binderi</li><li>Svein Erik Johansen AS</li><li>Bodø Squashklubb</li>
+    </ul>
+    <ul class="marquee-list" aria-hidden="true">
+      <li>Bodø Golfklubb</li><li>Gundersons</li><li>Hundefisk</li>
+      <li>HUD Klinikken Bodø</li><li>Blendzz</li><li>Bikemill</li>
+      <li>Lykke Binderi</li><li>Svein Erik Johansen AS</li><li>Bodø Squashklubb</li>
+    </ul>
+  </div>
+</section>
 
 <section class="intro">
   <div class="wrap">
@@ -241,23 +264,6 @@
       <p>Vi holder til i Bodø og møter deg der bedriften din faktisk er. Da blir innholdet ekte, og det blir lettere å forstå hva kundene dine trenger.</p>
       <p>Du får én kontaktperson som kjenner bedriften din – ikke et callsenter.</p>
       <p>Nettsiden er din. Ingen innlåsing, ingen leiemodell du ikke kommer ut av.</p>
-    </div>
-  </div>
-</section>
-
-<section class="kunder">
-  <div class="wrap">
-    <h2>Noen av våre kunder</h2>
-    <div class="grid3">
-      <div>Bodø Golfklubb</div>
-      <div>Gundersons</div>
-      <div>Hundefisk</div>
-      <div>HUD Klinikken</div>
-      <div>Blendzz</div>
-      <div>Bikemill</div>
-      <div>Lykke Binderi</div>
-      <div>Svein Erik Johansen AS</div>
-      <div>Bodø Squashklubb</div>
     </div>
   </div>
 </section>
