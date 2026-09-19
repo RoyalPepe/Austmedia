@@ -112,15 +112,18 @@
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
   /* MARQUEE */
-  .marquee{padding:28px 0;background:var(--bg-soft);overflow:hidden;
+  .marquee{padding:36px 0;background:var(--bg-soft);overflow:hidden;
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
   .marquee-track{display:flex;width:max-content;animation:scroll 34s linear infinite}
   .marquee:hover .marquee-track{animation-play-state:paused}
   .marquee-list{display:flex;align-items:center;gap:clamp(32px,5vw,72px);
     list-style:none;margin:0;padding:0 clamp(16px,2.5vw,36px)}
-  .marquee-list li{white-space:nowrap;font-size:clamp(16px,1.6vw,20px);
-    font-weight:500;color:var(--body)}
+  .marquee-list li{white-space:nowrap;font-size:clamp(20px,2.4vw,30px);
+    font-weight:600;color:var(--ink);display:flex;align-items:center}
+  .marquee-list li img{height:clamp(34px,4vw,52px);width:auto;display:block;
+    object-fit:contain;opacity:.75;filter:grayscale(1)}
+  .marquee:hover .marquee-list li img{opacity:1;filter:none}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
