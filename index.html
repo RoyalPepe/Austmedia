@@ -98,6 +98,11 @@
   figure .media{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:#1A1A1A}
   figure .media img,figure .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   figcaption{font-size:15px;color:var(--body)}
+  @media (min-width:761px){
+    .prosjekter .grid3{grid-template-columns:repeat(6,minmax(0,1fr))}
+    .prosjekter .grid3 figure{grid-column:span 2}
+    .prosjekter .grid3 figure:nth-child(n+4){grid-column:span 3}
+  }
 
   /* KONTAKT */
   .kontakt{background:var(--bg-soft)}
@@ -180,12 +185,12 @@
   <div class="marquee-track">
     <ul class="marquee-list">
       <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><span>HUD Klinikken Bodø</span></li><li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
+      <li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
       <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
     </ul>
     <ul class="marquee-list" aria-hidden="true">
       <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><span>HUD Klinikken Bodø</span></li><li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
+      <li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
       <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
     </ul>
   </div>
@@ -286,10 +291,6 @@
         <figcaption>Reels for Gundersons</figcaption>
       </figure>
       <figure>
-        <div class="media"><video src="media/hud-jens.mp4" poster="media/hud-poster.jpg" controls playsinline preload="none"></video></div>
-        <figcaption>Innholdsrik reel for HUD Klinikken Bodø</figcaption>
-      </figure>
-      <figure>
         <div class="media"><img src="media/barbershop.jpg" alt="Frisør klipper hår" loading="lazy"></div>
         <figcaption>Foto av Blendzz Barbershop</figcaption>
       </figure>
@@ -299,7 +300,7 @@
       </figure>
       <figure>
         <div class="media"><img src="media/lykke-binderi.jpg" alt="Inngangen til Lykke Binderi" loading="lazy"></div>
-        <figcaption>Foto for Lykke Binderi</figcaption>
+        <figcaption>Bilde fra videoarbeid for Lykke Binderi</figcaption>
       </figure>
       <figure>
         <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på green" loading="lazy"></div>
