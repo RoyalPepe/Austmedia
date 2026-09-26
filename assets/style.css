@@ -110,12 +110,17 @@ section:not(.soft):not(.services) .card{background:var(--bg-soft)}
 
 /* FILM (mørk seksjon) */
 .film{background:var(--ink);color:#fff}
-.film .wrap{display:grid;grid-template-columns:1fr minmax(0,420px);gap:64px;align-items:center}
+.film>.wrap{display:flex;flex-direction:column;gap:48px}
+.film-grid{display:grid;grid-template-columns:1fr minmax(0,420px);gap:64px;align-items:center}
 .film .text{display:flex;flex-direction:column;gap:20px}
 .film h2{font-size:clamp(30px,4vw,52px);line-height:1.15}
+.film .film-grid h3{font-size:clamp(26px,3vw,40px);line-height:1.15;font-weight:500}
+.film .card p{color:var(--body)}
+.film .card h3{color:var(--ink)}
+.film .card .more{color:var(--accent)}
 .film p{color:#C9C9C9;font-size:18px}
 .film .tags span,.film .tags a{background:transparent;border:1px solid #3A3A3A;color:#fff}
-.film video{width:100%;border-radius:10px;background:#000}
+.film-grid video{width:100%;border-radius:10px;background:#000}
 .film .more{color:var(--accent-light)}
 
 /* SPLIT */
@@ -231,8 +236,8 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
 
 @media (max-width:1100px){
   :root{--pad:56px}
-  .film .wrap,.split .wrap,.kontakt .wrap,.page-hero.has-media .wrap{grid-template-columns:1fr;gap:36px}
-  .film video,.page-hero .media{max-width:420px;margin:0 auto;width:100%}
+  .film-grid,.split .wrap,.kontakt .wrap,.page-hero.has-media .wrap{grid-template-columns:1fr;gap:36px}
+  .film-grid video,.page-hero .media{max-width:420px;margin:0 auto;width:100%}
   .split .media{aspect-ratio:16/10}
   .plans{grid-template-columns:1fr;max-width:560px}
   .site-footer .grid{grid-template-columns:1fr 1fr}
