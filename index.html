@@ -8,11 +8,13 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Aust Media lager innhold for bedrifter: reels og innlegg til sosiale medier, foto, video og reklamefilm, nettsider og annonser. Basert i Bodø.">
-<meta property="og:title" content="Aust Media">
+<link rel="canonical" href="https://www.austmedia.no/">
+<meta property="og:title" content="Markedsføring i Bodø – SoMe, video og foto | Aust Media">
 <meta property="og:description" content="Film, foto og nettsider for bedrifter i Bodø og Nordland.">
-<meta property="og:image" content="/media/golf-poster.jpg">
+<meta property="og:image" content="https://www.austmedia.no/media/golf-poster.jpg">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://austmedia.no/">
+<meta property="og:url" content="https://www.austmedia.no/">
+<meta property="og:locale" content="nb_NO">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -115,6 +117,10 @@
   form{background:#fff;border-radius:6px;padding:clamp(24px,3vw,42px);display:flex;flex-direction:column;gap:16px}
   label{font-size:14px;font-weight:500;display:flex;flex-direction:column;gap:8px}
   input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #D4D4D4;border-radius:4px;background:#fff;width:100%}
+  .form-status:empty{display:none}
+  .form-status{font-size:15px;font-weight:500;color:var(--ink)}
+  .form-fallback{font-size:14px;color:var(--muted)}
+  .form-fallback a{text-decoration:underline;color:var(--ink)}
   .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 
   footer{background:var(--ink);color:#BDBDBD;padding:32px var(--pad);font-size:14px}
@@ -163,9 +169,9 @@
 <body>
 
 <header class="hero" id="top">
-  <div class="hero-media"><img src="media/eirik-hero.jpg" alt="Eirik fra Aust Media på kaia i Bodø" fetchpriority="high"></div>
+  <div class="hero-media"><img src="media/eirik-hero.jpg" alt="Eirik fra Aust Media på kaia i Bodø" fetchpriority="high" width="1480" height="1080"></div>
   <nav class="nav">
-    <a href="#top"><img src="media/logo-hvit.png" alt="Aust Media"></a>
+    <a href="#top"><img src="media/logo-hvit.png" alt="Aust Media" width="400" height="340"></a>
     <ul>
       <li><a href="#tjenester">Tjenester</a></li>
       <li><a href="#film">Arbeid</a></li>
@@ -184,14 +190,14 @@
   <h2 class="marquee-title">Bedrifter vi har samarbeidet med</h2>
   <div class="marquee-track">
     <ul class="marquee-list">
-      <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
-      <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
+      <li><img src="media/logo-bodo-golfklubb.png" alt="Bodø Golfklubb" width="117" height="120" loading="lazy"><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt="Gundersons" width="189" height="120" loading="lazy"><span>Gundersons</span></li><li><span>Hundefisk</span></li>
+      <li><img class="boxed" src="media/logo-blendzz.png" alt="Blendzz" width="392" height="120" loading="lazy"><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt="Bikemill" width="341" height="120" loading="lazy"><span>Bikemill</span></li>
+      <li><img src="media/logo-lykke-binderi.png" alt="Lykke Binderi" width="193" height="120" loading="lazy"><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt="Svein Erik Johansen AS" width="620" height="120" loading="lazy"><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt="Bodø Squashklubb" width="101" height="120" loading="lazy"><span>Bodø Squashklubb</span></li>
     </ul>
     <ul class="marquee-list" aria-hidden="true">
-      <li><img src="media/logo-bodo-golfklubb.png" alt=""><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt=""><span>Gundersons</span></li><li><span>Hundefisk</span></li>
-      <li><img class="boxed" src="media/logo-blendzz.png" alt=""><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt=""><span>Bikemill</span></li>
-      <li><img src="media/logo-lykke-binderi.png" alt=""><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt=""><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt=""><span>Bodø Squashklubb</span></li>
+      <li><img src="media/logo-bodo-golfklubb.png" alt="" width="117" height="120" loading="lazy"><span>Bodø Golfklubb</span></li><li><img src="media/logo-gundersons.png" alt="" width="189" height="120" loading="lazy"><span>Gundersons</span></li><li><span>Hundefisk</span></li>
+      <li><img class="boxed" src="media/logo-blendzz.png" alt="" width="392" height="120" loading="lazy"><span>Blendzz</span></li><li><img class="boxed" src="media/logo-bikemill.png" alt="" width="341" height="120" loading="lazy"><span>Bikemill</span></li>
+      <li><img src="media/logo-lykke-binderi.png" alt="" width="193" height="120" loading="lazy"><span>Lykke Binderi</span></li><li><img src="media/logo-svein-erik-johansen.png" alt="" width="620" height="120" loading="lazy"><span>Svein Erik Johansen AS</span></li><li><img src="media/logo-bodo-squashklubb.png" alt="" width="101" height="120" loading="lazy"><span>Bodø Squashklubb</span></li>
     </ul>
   </div>
 </section>
@@ -223,17 +229,17 @@
       </article>
 
       <article class="card">
-        <div class="media"><img src="media/bts-kamera-poster.jpg" alt="Opptak med kamera hos kunde" loading="lazy"></div>
+        <div class="media"><img src="media/bts-kamera-poster.jpg" alt="Opptak med kamera hos kunde" loading="lazy" width="810" height="914"></div>
         <div class="body"><h3>Foto, video og reklamefilm</h3><p>Reklamefilm og bilder som viser hvem dere er – produsert lokalt, klare til bruk på nett, i sosiale medier og i annonser.</p></div>
       </article>
 
       <article class="card">
-        <div class="media"><img src="media/gundersons-butikk2.jpg" alt="Kunder ser på plakat i butikk" loading="lazy"></div>
+        <div class="media"><img src="media/gundersons-butikk2.jpg" alt="Kunder ser på plakat i butikk" loading="lazy" width="1280" height="720"></div>
         <div class="body"><h3>Nettsider</h3><p>Raske, moderne nettsider som du eier selv – bygget for å gi henvendelser, ikke bare se pene ut.</p></div>
       </article>
 
       <article class="card">
-        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på golfbanen" loading="lazy"></div>
+        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på golfbanen" loading="lazy" width="720" height="1280"></div>
         <div class="body"><h3>Annonser</h3><p>Målrettede annonser på Meta og Google som når riktige folk i ditt område – og gjør følgere til kunder.</p></div>
       </article>
 
@@ -291,20 +297,20 @@
         <figcaption>Reels for Gundersons</figcaption>
       </figure>
       <figure>
-        <div class="media"><img src="media/barbershop.jpg" alt="Frisør klipper hår" loading="lazy"></div>
+        <div class="media"><img src="media/barbershop.jpg" alt="Frisør klipper hår" loading="lazy" width="1032" height="1200"></div>
         <figcaption>Foto av Blendzz Barbershop</figcaption>
       </figure>
       <figure>
-        <div class="media"><img src="media/hundefisk-toreirik.jpg" alt="Tor Erik med hund foran UniQ-stand" loading="lazy"></div>
+        <div class="media"><img src="media/hundefisk-toreirik.jpg" alt="Tor Erik med hund foran UniQ-stand" loading="lazy" width="974" height="999"></div>
         <figcaption>Foto for Hundefisk</figcaption>
       </figure>
       <figure>
-        <div class="media"><img src="media/lykke-binderi.jpg" alt="Inngangen til Lykke Binderi" loading="lazy"></div>
+        <div class="media"><img src="media/lykke-binderi.jpg" alt="Inngangen til Lykke Binderi" loading="lazy" width="936" height="1400"></div>
         <figcaption>Bilde fra videoarbeid for Lykke Binderi</figcaption>
       </figure>
       <figure>
-        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på green" loading="lazy"></div>
-        <figcaption>Foto fra reklamefilm for Ilstad Golfklubb</figcaption>
+        <div class="media"><img src="media/golf-bane.jpg" alt="Spillere på green" loading="lazy" width="720" height="1280"></div>
+        <figcaption><!-- TODO(eirik): Bekreft riktig klubbnavn (Bodø Golfklubb eller Ilstad Golfklubb) -->Foto fra reklamefilm for Bodø Golfklubb</figcaption>
       </figure>
     </div>
   </div>
@@ -323,8 +329,10 @@
       </div>
     </div>
 
-    <!-- Bytt FORM_ID med din egen fra formspree.io, ellers sender ikke skjemaet noe -->
-    <form action="https://formspree.io/f/FORM_ID" method="POST">
+    <!-- TODO(eirik): Bytt FORM_ID med Formspree-ID-en din (formspree.io → New form). Til det er gjort, sender ikke skjemaet noe. -->
+    <form id="kontaktskjema" action="https://formspree.io/f/FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="Ny henvendelse fra austmedia.no">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       <div class="row">
         <label>Navn<input type="text" name="navn" required></label>
         <label>Bedrift<input type="text" name="bedrift"></label>
@@ -344,6 +352,8 @@
       </label>
       <label>Melding<textarea name="melding" rows="5"></textarea></label>
       <button class="btn btn-accent" type="submit">Send</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+      <p class="form-fallback">Fungerer ikke skjemaet? Send e-post til <a href="mailto:post@austmedia.no">post@austmedia.no</a></p>
     </form>
   </div>
 </section>
@@ -354,6 +364,28 @@
     <span>Org.nr 931 606 107</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var form=document.getElementById('kontaktskjema');
+  if(!form||!window.fetch)return;
+  var status=form.querySelector('.form-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');
+    btn.disabled=true;status.textContent='Sender …';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+      .then(function(r){
+        if(r.ok){window.location.href='/takk/';return;}
+        throw new Error('status '+r.status);
+      })
+      .catch(function(){
+        status.textContent='Beklager, meldingen ble ikke sendt. Send e-post til post@austmedia.no eller ring 412 02 192.';
+        btn.disabled=false;
+      });
+  });
+})();
+</script>
 
 </body>
 </html>
