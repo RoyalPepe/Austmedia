@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Markedsføring i Bodø – SoMe, video og foto | Aust Media</title>
 <meta name="description" content="Vi lager reels, reklamefilm og bilder for bedrifter i Bodø – og kjører annonsene som gjør seerne til kunder. Én kontaktperson, alt produsert lokalt.">
-<link rel="preload" as="image" href="/media/eirik-hero.jpg" imagesrcset="/media/eirik-hero-800.jpg 800w, /media/eirik-hero.jpg 1480w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="/media/eirik-hero.jpg" imagesrcset="/media/eirik-hero-800.jpg 800w, /media/eirik-hero.jpg 1480w" imagesizes="(max-width: 760px) 550px, 720px" fetchpriority="high">
 <link rel="canonical" href="https://www.austmedia.no/">
 <meta property="og:url" content="https://www.austmedia.no/">
 <meta property="og:title" content="Markedsføring i Bodø – SoMe, video og foto | Aust Media">
@@ -124,7 +124,7 @@
 <a class="skip" href="#innhold">Hopp til innhold</a>
 <header class="site-header">
   <div class="nav">
-    <a class="nav-logo" href="/"><img src="/media/logo-hvit.png" alt="Aust Media – til forsiden" width="400" height="340"></a>
+    <a class="nav-logo" href="/"><img class="logo-light" src="/media/logo-hvit.png" alt="Aust Media – til forsiden" width="400" height="340" loading="lazy"><img class="logo-dark" src="/media/logo-mork.png" alt="Aust Media – til forsiden" width="400" height="340" loading="lazy"></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny"><span class="bars" aria-hidden="true"></span><span class="sr-only">Meny</span></button>
     <nav class="nav-menu" id="hovedmeny" aria-label="Hovedmeny">
       <ul>
@@ -151,11 +151,16 @@
 
 <main id="innhold">
 <section class="hero" id="top">
-  <div class="hero-media"><img src="/media/eirik-hero.jpg" alt="Eirik fra Aust Media på kaia i Bodø" width="1480" height="1080" srcset="/media/eirik-hero-800.jpg 800w, /media/eirik-hero.jpg 1480w" sizes="100vw" fetchpriority="high"></div>
-  <div class="hero-inner">
-    <h1>Markedsføring, video og foto for bedrifter i Bodø</h1>
-    <p>Vi lager innholdet som får folk i Bodø til å legge merke til bedriften din – reels, reklamefilm og bilder – og sørger for at det blir sett. Du får én kontaktperson som planlegger, produserer og publiserer.</p>
-    <div class="btn-row"><a class="btn btn-light" href="#kontakt">Book en uforpliktende prat</a><a class="btn btn-ghost" href="/arbeid/">Se hva vi har laget</a></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Markedsføring, video og foto for bedrifter i Bodø</h1>
+      <p>Vi lager innholdet som får folk i Bodø til å legge merke til bedriften din – reels, reklamefilm og bilder – og sørger for at det blir sett. Du får én kontaktperson som planlegger, produserer og publiserer.</p>
+      <div class="btn-row"><a class="btn btn-dark" href="#kontakt">Book en uforpliktende prat</a><a class="btn btn-outline" href="/arbeid/">Se hva vi har laget</a></div>
+    </div>
+    <figure class="hero-figure">
+      <div class="hero-photo"><img src="/media/eirik-hero.jpg" alt="Eirik Kristiansen, daglig leder i Aust Media" width="1480" height="1080" srcset="/media/eirik-hero-800.jpg 800w, /media/eirik-hero.jpg 1480w" sizes="(max-width: 760px) 550px, 720px" fetchpriority="high"></div>
+      <figcaption>Eirik Kristiansen, daglig leder</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -231,16 +236,16 @@
         <div class="tags"><span>Konsept</span><span>Opptak</span><span>Klipp</span><span>Annonse</span></div>
         <a class="more" href="/arbeid/bodo-golfklubb/">Les om prosjektet</a>
       </div>
-      <video src="/media/golf-reel.mp4" poster="/media/golf-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Reklamefilm for Bodø Golfklubb"></video>
+      <video class="lazy-poster" src="/media/golf-reel.mp4" data-poster="/media/golf-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Reklamefilm for Bodø Golfklubb"></video>
     </div>
     <div class="grid2">
       <article class="card">
         <div class="media"><video class="lazy-video" data-src="/media/gundersons-plakater.mp4" data-poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true"></video></div>
-        <div class="body"><h3>Reels for Gundersons</h3><p><!-- TODO(eirik): 2–3 setninger om hva vi lagde for Gundersons, hvorfor og resultat --><span class="todo">[TODO: 2–3 setninger om hva vi lagde for Gundersons, hvorfor og resultat]</span></p><a class="more" href="/arbeid/gundersons/">Se caset</a></div>
+        <div class="body"><h3>Reels for Gundersons</h3><p>Gundersons ville ha reels som passet stilen deres. Vi lagde tre kreative reels med maleriene og butikken i hovedrollen.</p><a class="more" href="/arbeid/gundersons/">Se caset</a></div>
       </article>
       <article class="card">
         <div class="media"><img src="/media/barbershop.jpg" alt="Barberer hos Blendzz i arbeid" width="1032" height="1200" loading="lazy"></div>
-        <div class="body"><h3>Bedriftsfoto for Blendzz</h3><p><!-- TODO(eirik): 2–3 setninger om fotojobben for Blendzz --><span class="todo">[TODO: 2–3 setninger om fotojobben for Blendzz]</span></p><a class="more" href="/arbeid/blendzz/">Se caset</a></div>
+        <div class="body"><h3>Bedriftsfoto for Blendzz</h3><p>Blendzz ville ha profesjonelle bilder av eieren og butikken. Vi fotograferte i salongen, klare til bruk på nett og i sosiale medier.</p><a class="more" href="/arbeid/blendzz/">Se caset</a></div>
       </article>
     </div>
     <div><a class="btn btn-light" href="/arbeid/">Se alt arbeid</a></div>

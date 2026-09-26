@@ -60,9 +60,10 @@
   // Loop-videoer: poster lastes når videoen nærmer seg skjermen, selve videoen
   // først når den er synlig. Pauses når den er utenfor.
   var vids = d.querySelectorAll('video.lazy-video');
+  var posters = d.querySelectorAll('video.lazy-poster');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function showPoster(v) { if (!v.poster && v.getAttribute('data-poster')) v.poster = v.getAttribute('data-poster'); }
-  if (vids.length && 'IntersectionObserver' in window) {
+  if ((vids.length || posters.length) && 'IntersectionObserver' in window) {
     var near = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { showPoster(en.target); near.unobserve(en.target); } });
     }, { rootMargin: '400px 0px' });
@@ -78,12 +79,14 @@
         }
       });
     }, { threshold: 0.1 });
+    Array.prototype.forEach.call(posters, function (v) { near.observe(v); });
     Array.prototype.forEach.call(vids, function (v) {
       near.observe(v);
       if (!reduce) inView.observe(v);
     });
   } else {
     Array.prototype.forEach.call(vids, showPoster);
+    Array.prototype.forEach.call(posters, showPoster);
   }
 
   // Kontaktskjema: send via Formspree uten å forlate siden, videresend til /takk/

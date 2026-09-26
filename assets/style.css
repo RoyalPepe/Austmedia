@@ -27,7 +27,12 @@ section{padding:90px var(--pad)}
 
 /* HEADER / NAV */
 .site-header{position:relative;z-index:20;background:var(--ink)}
-body.home .site-header{position:absolute;top:0;left:0;right:0;background:transparent}
+body.home .site-header{background:var(--bg);border-bottom:1px solid var(--line)}
+.nav-logo .logo-dark{display:none}
+body.home .nav-logo .logo-light{display:none}
+body.home .nav-logo .logo-dark{display:block}
+body.home .nav-toggle{color:var(--ink)}
+@media (min-width:941px){body.home .nav-menu>ul{color:var(--ink)}}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px var(--pad)}
 .nav-logo img{height:64px;width:auto}
 .nav-menu>ul{display:flex;align-items:center;gap:36px;list-style:none;margin:0;padding:0;font-size:17px;color:#fff}
@@ -45,14 +50,20 @@ body.home .site-header{position:absolute;top:0;left:0;right:0;background:transpa
 .nav-toggle{display:none}
 
 /* HERO (forside) */
-.hero{position:relative;min-height:min(88vh,1000px);display:flex;flex-direction:column;padding:0;overflow:hidden}
-.hero-media{position:absolute;inset:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 28%}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,28,.30) 0%,rgba(15,20,28,.22) 40%,rgba(15,20,28,.55) 100%)}
-.hero-inner{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;color:#fff;gap:18px;padding:140px 24px 96px}
-.hero-inner h1{font-size:clamp(36px,5.6vw,80px);font-weight:400;line-height:1.05;max-width:1100px}
-.hero-inner p{color:#fff;font-size:clamp(16px,1.7vw,21px);max-width:760px}
-.hero-inner .btn-row{margin-top:14px}
+.hero{background:var(--bg);padding:64px var(--pad) 96px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:64px;align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:22px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;line-height:1.1;color:var(--ink)}
+.hero-text p{font-size:clamp(17px,1.6vw,20px);max-width:620px}
+.hero .btn-row{justify-content:flex-start;margin-top:8px}
+.hero-figure{width:100%;max-width:420px;justify-self:end;gap:10px}
+.hero-photo{border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-soft)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.hero-figure figcaption{font-size:14px;color:var(--muted)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-dark:hover{background:#000}
+.btn-outline:hover{background:var(--ink);color:#fff}
 
 /* UNDERSIDE-HERO */
 .page-hero{background:var(--ink);color:#fff;padding:32px var(--pad) 90px}
@@ -141,7 +152,9 @@ figure{margin:0;display:flex;flex-direction:column;gap:10px}
 figure .media{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;background:#1A1A1A}
 figure .media img,figure .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 figcaption{font-size:15px;color:var(--body)}
-a.fig-link figcaption{text-decoration:underline;text-underline-offset:3px;color:var(--ink);font-weight:500}
+figcaption .fig-title{display:block}
+figcaption .fig-text{display:block;margin-top:6px;line-height:1.6;color:var(--body)}
+a.fig-link .fig-title{text-decoration:underline;text-underline-offset:3px;color:var(--ink);font-weight:500}
 @media (min-width:761px){
   .prosjekter .grid3{grid-template-columns:repeat(6,minmax(0,1fr))}
   .prosjekter .grid3>*{grid-column:span 2}
@@ -273,8 +286,10 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
   .featured{grid-template-columns:1fr}
   .featured .media{min-height:220px;aspect-ratio:16/10}
   .row,.facts,.case-media{grid-template-columns:1fr}
-  .hero{min-height:min(78vh,760px)}
-  .hero-inner{padding-bottom:56px}
+  .hero{padding:32px var(--pad) 56px}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-figure{max-width:320px;justify-self:start}
+  .hero .btn-row{flex-direction:column;align-items:stretch;width:100%}
   .steps>div{flex-direction:column;gap:2px}
   .site-footer{padding:48px var(--pad) 28px}
   .site-footer .grid{grid-template-columns:1fr;gap:36px}
@@ -284,3 +299,6 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
   .grid3,.grid2{grid-template-columns:1fr}
   .btn-row{flex-direction:column;align-items:stretch;width:100%}
 }
+
+/* Fokusmarkering på lys bakgrunn */
+body.home .site-header :focus-visible,.hero :focus-visible,.card :focus-visible,.prose :focus-visible,.faq :focus-visible,.kontakt :focus-visible{outline-color:var(--accent)}

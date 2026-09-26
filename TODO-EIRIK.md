@@ -47,12 +47,17 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
 
 ### Caser
 - [ ] `/arbeid/bodo-golfklubb/`: utfordring, konkrete resultater (tall), sitat med navn og tillatelse
-- [ ] `/arbeid/gundersons/`: ingress, periode, utfordring, hva vi lagde (antall reels, tema, format), resultat, sitat
-- [ ] `/arbeid/blendzz/`: ingress, utfordring, hva vi lagde (antall og typer bilder), resultat, sitat
-- [ ] Forsiden (Utvalgt arbeid): 2–3 setninger om **Gundersons** og om **Blendzz**
-- [ ] `/sosiale-medier-bodo/`: 3–4 setninger om Gundersons (utgangspunkt, innhold, resultat)
-- [ ] `/videoproduksjon-bodo/`: 1–2 setninger om Gundersons og om **Lykke Binderi**
-- [ ] `/bedriftsfoto-bodo/`: 1–2 setninger om Blendzz og om **Hundefisk**
+- [ ] `/arbeid/gundersons/`: **Resultat** (tall, f.eks. visninger, følgervekst eller salg). Seksjonen er fjernet
+      til du har tall. Legg den inn igjen mellom «Hva vi lagde» og «Tjenester brukt».
+- [ ] `/arbeid/gundersons/`: **kundesitat** med navn og tillatelse (seksjonen er fjernet, legges inn sammen med Resultat)
+- [ ] `/arbeid/blendzz/`: **Resultat** (hvordan bildene er brukt, eventuelle tall). Seksjonen er fjernet til du har det.
+- [ ] `/arbeid/blendzz/`: **kundesitat** med navn og tillatelse (seksjonen er fjernet)
+- [ ] Valgfritt: periode for Gundersons-jobben (feltet er fjernet fra casesiden)
+- [ ] `/videoproduksjon-bodo/`: 1–2 setninger om **Lykke Binderi**
+- [ ] `/bedriftsfoto-bodo/`: 1–2 setninger om **Hundefisk**
+
+Ferdig: casetekstene for Gundersons og Blendzz står på forsiden, `/arbeid/`, casesidene,
+`/sosiale-medier-bodo/`, `/videoproduksjon-bodo/` og `/bedriftsfoto-bodo/`.
 - [ ] `/nettsider-bodo/`: beskriv nettsidearbeidet for **Hundefisk**, og bekreft at dere faktisk har laget nettsiden deres.
       Hvis ikke, bytt eksempel eller fjern seksjonen.
 
