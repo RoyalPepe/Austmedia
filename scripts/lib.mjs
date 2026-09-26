@@ -11,7 +11,7 @@ const SKIP = new Set(['.git', '.vercel', 'node_modules', 'scripts']);
 export function htmlFiles(dir = ROOT) {
   const out = [];
   for (const name of readdirSync(dir)) {
-    if (SKIP.has(name)) continue;
+    if (SKIP.has(name) || name.startsWith('_')) continue;
     const p = join(dir, name);
     if (statSync(p).isDirectory()) out.push(...htmlFiles(p));
     else if (name.endsWith('.html')) out.push(relative(ROOT, p).split(sep).join('/'));
