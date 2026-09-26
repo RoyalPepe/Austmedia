@@ -7,18 +7,94 @@
 <meta name="robots" content="noindex">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<style>
-  body{margin:0;font-family:"Montserrat","Helvetica Neue",Helvetica,sans-serif;color:#1A1A1A;background:#F6F6F4;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:20px}
-  h1{font-weight:500;font-size:clamp(30px,4vw,48px);margin:0 0 16px}
-  p{line-height:1.75;color:#3D3D3D}
-  a{display:inline-flex;margin-top:24px;height:56px;padding:0 32px;align-items:center;border-radius:4px;background:#15803D;color:#fff;font-weight:600;text-decoration:none}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script>document.documentElement.className+=' js'</script>
+<script src="/assets/main.js" defer></script>
 </head>
 <body>
-<main>
-  <h1>Takk for meldingen!</h1>
-  <p>Vi har mottatt henvendelsen din og svarer så raskt vi kan.</p>
-  <a href="/">Tilbake til forsiden</a>
+<!-- HEADER:START -->
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+  <div class="nav">
+    <a class="nav-logo" href="/"><img src="/media/logo-hvit.png" alt="Aust Media – til forsiden" width="400" height="340"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny"><span class="bars" aria-hidden="true"></span><span class="sr-only">Meny</span></button>
+    <nav class="nav-menu" id="hovedmeny" aria-label="Hovedmeny">
+      <ul>
+        <li class="has-sub">
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="meny-tjenester">Tjenester</button>
+          <ul class="sub" id="meny-tjenester">
+            <li><a href="/sosiale-medier-bodo/">Sosiale medier</a></li>
+            <li><a href="/reklamefilm-bodo/">Reklamefilm</a></li>
+            <li><a href="/videoproduksjon-bodo/">Videoproduksjon</a></li>
+            <li><a href="/bedriftsfoto-bodo/">Bedriftsfoto</a></li>
+            <li><a href="/annonsering-bodo/">Annonsering</a></li>
+            <li><a href="/nettsider-bodo/">Nettsider</a></li>
+          </ul>
+        </li>
+        <li><a href="/arbeid/">Arbeid</a></li>
+        <li><a href="/priser/">Priser</a></li>
+        <li><a href="/om-oss/">Om oss</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- HEADER:END -->
+
+<main id="innhold">
+<section class="page-hero notfound">
+  <div class="wrap">
+    <h1>Takk for meldingen!</h1>
+    <p class="lead">Vi har mottatt henvendelsen din og svarer så raskt vi kan.</p>
+    <div class="btn-row"><a class="btn btn-light" href="/">Tilbake til forsiden</a><a class="btn btn-ghost" href="/arbeid/">Se hva vi har laget</a></div>
+  </div>
+</section>
 </main>
+
+<!-- FOOTER:START -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img class="logo" src="/media/logo-hvit.png" alt="Aust Media" width="400" height="340" loading="lazy">
+        <ul>
+          <li>Aust Media · Bodø</li>
+          <li><a href="tel:+4741202192">Tlf 412 02 192</a></li>
+          <li><a href="mailto:post@austmedia.no">post@austmedia.no</a></li>
+          <li><a href="https://www.instagram.com/austmediaa/" target="_blank" rel="noopener">Instagram @austmediaa</a></li>
+          <li>Org.nr 931 606 107</li>
+        </ul>
+      </div>
+      <nav aria-label="Tjenester">
+        <h2>TJENESTER</h2>
+        <ul>
+          <li><a href="/sosiale-medier-bodo/">Sosiale medier i Bodø</a></li>
+          <li><a href="/reklamefilm-bodo/">Reklamefilm i Bodø</a></li>
+          <li><a href="/videoproduksjon-bodo/">Videoproduksjon i Bodø</a></li>
+          <li><a href="/bedriftsfoto-bodo/">Bedriftsfoto i Bodø</a></li>
+          <li><a href="/annonsering-bodo/">Annonsering i Bodø</a></li>
+          <li><a href="/nettsider-bodo/">Nettsider i Bodø</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Aust Media">
+        <h2>AUST MEDIA</h2>
+        <ul>
+          <li><a href="/arbeid/">Arbeid</a></li>
+          <li><a href="/priser/">Priser</a></li>
+          <li><a href="/om-oss/">Om oss</a></li>
+          <li><a href="/#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bottom">
+      <span>Copyright © 2026 Aust Media</span>
+      <span>Org.nr 931 606 107</span>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
 </body>
 </html>
