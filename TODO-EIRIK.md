@@ -75,6 +75,4 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
 - [ ] **Drone**: lag bare `/drone-bodo/` hvis du har drone og kompetansebevis fra Luftfartstilsynet.
 - [ ] Legg til Google-bedriftsprofil og lenk den i `sameAs` i organisasjons-schemaet på forsiden.
 - [ ] Hvis du får en fast adresse: legg til `streetAddress` og `postalCode` i schemaet på forsiden.
-- [ ] Vurder kortere title på sidene som er over 60 tegn (Google kan kutte dem):
-      `/priser/` (68), `/annonsering-bodo/` (68), `/bedriftsfoto-bodo/` (64), `/nettsider-bodo/` (61).
 - [ ] Video-filene er store (golf-reel.mp4 9,9 MB). Komprimering til 2–4 MB gir raskere lasting.
