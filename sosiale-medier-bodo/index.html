@@ -18,7 +18,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <script>document.documentElement.className+=' js'</script>
 <script src="/assets/main.js" defer></script>
@@ -144,7 +146,7 @@
       <p class="lead">Du vet at bedriften burde vært mer synlig på Instagram og TikTok. Problemet er sjelden kunnskap – det er tid. Vi tar oss av hele jobben: planlegging, opptak, klipp, publisering og rapport. Du godkjenner, vi leverer.</p>
       <div class="btn-row"><a class="btn btn-light" href="/#kontakt">Book en gratis gjennomgang av profilen din</a></div>
     </div>
-    <div class="media"><video src="/media/some-loop.mp4" poster="/media/some-loop-poster.jpg" width="1280" height="720" autoplay muted loop playsinline preload="none"></video></div>
+    <div class="media"><video class="lazy-video" data-src="/media/some-loop.mp4" data-poster="/media/some-loop-poster.jpg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true"></video></div>
   </div>
 </section>
 
@@ -164,7 +166,7 @@
 
 <section class="split">
   <div class="wrap">
-    <div class="media"><video src="/media/gundersons-plakater.mp4" poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" autoplay muted loop playsinline preload="none"></video></div>
+    <div class="media"><video class="lazy-video" data-src="/media/gundersons-plakater.mp4" data-poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     <div class="text">
       <h2>Eksempel: reels for Gundersons</h2>
       <p><!-- TODO(eirik): 3–4 setninger om utgangspunkt, innhold og resultat for Gundersons --><span class="todo">[TODO: 3–4 setninger om utgangspunkt, innhold og resultat for Gundersons]</span></p>

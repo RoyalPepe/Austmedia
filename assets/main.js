@@ -57,6 +57,35 @@
     if (a.getAttribute('href') === path) a.setAttribute('aria-current', 'page');
   });
 
+  // Loop-videoer: poster lastes når videoen nærmer seg skjermen, selve videoen
+  // først når den er synlig. Pauses når den er utenfor.
+  var vids = d.querySelectorAll('video.lazy-video');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function showPoster(v) { if (!v.poster && v.getAttribute('data-poster')) v.poster = v.getAttribute('data-poster'); }
+  if (vids.length && 'IntersectionObserver' in window) {
+    var near = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { showPoster(en.target); near.unobserve(en.target); } });
+    }, { rootMargin: '400px 0px' });
+    var inView = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) {
+          if (!v.src) v.src = v.getAttribute('data-src');
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else if (v.src) {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+    Array.prototype.forEach.call(vids, function (v) {
+      near.observe(v);
+      if (!reduce) inView.observe(v);
+    });
+  } else {
+    Array.prototype.forEach.call(vids, showPoster);
+  }
+
   // Kontaktskjema: send via Formspree uten å forlate siden, videresend til /takk/
   var form = d.getElementById('kontaktskjema');
   if (form && window.fetch && window.FormData) {

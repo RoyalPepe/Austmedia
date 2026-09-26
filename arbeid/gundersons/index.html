@@ -18,7 +18,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <script>document.documentElement.className+=' js'</script>
 <script src="/assets/main.js" defer></script>
@@ -88,7 +90,7 @@
       <p class="lead">Korte videoer til sosiale medier. <!-- TODO(eirik): én setning om hva reelsene handlet om --><span class="todo">[TODO: én setning om hva reelsene handlet om]</span></p>
       
     </div>
-    <div class="media"><video src="/media/gundersons-plakater.mp4" poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" autoplay muted loop playsinline preload="none"></video></div>
+    <div class="media"><video class="lazy-video" data-src="/media/gundersons-plakater.mp4" data-poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true"></video></div>
   </div>
 </section>
 

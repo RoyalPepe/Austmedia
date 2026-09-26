@@ -18,7 +18,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <script>document.documentElement.className+=' js'</script>
 <script src="/assets/main.js" defer></script>
@@ -144,7 +146,7 @@
       <p class="lead">Video er den raskeste måten å vise hvem dere er. Vi planlegger, filmer og klipper, og leverer filmene klare til nettsiden, sosiale medier, annonser og skjermen i lokalet.</p>
       <div class="btn-row"><a class="btn btn-light" href="/#kontakt">Book en uforpliktende prat</a></div>
     </div>
-    <div class="media"><video src="/media/bts-kamera.mp4" poster="/media/bts-kamera-poster.jpg" width="810" height="914" autoplay muted loop playsinline preload="none"></video></div>
+    <div class="media"><video class="lazy-video" data-src="/media/bts-kamera.mp4" data-poster="/media/bts-kamera-poster.jpg" width="810" height="914" muted loop playsinline preload="none" aria-hidden="true"></video></div>
   </div>
 </section>
 
@@ -194,7 +196,7 @@
     <h2 class="section-title" style="margin-bottom:36px">Eksempler</h2>
     <div class="grid2">
       <article class="card">
-        <div class="media"><video src="/media/gundersons-plakater.mp4" poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" autoplay muted loop playsinline preload="none"></video></div>
+        <div class="media"><video class="lazy-video" data-src="/media/gundersons-plakater.mp4" data-poster="/media/gundersons-plakater-poster.jpg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true"></video></div>
         <div class="body"><h3>Reels for Gundersons</h3><p><!-- TODO(eirik): 1–2 setninger om videoarbeidet for Gundersons --><span class="todo">[TODO: 1–2 setninger om videoarbeidet for Gundersons]</span></p><a class="more" href="/arbeid/gundersons/">Se caset</a></div>
       </article>
       <article class="card">

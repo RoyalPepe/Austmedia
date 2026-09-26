@@ -42,7 +42,15 @@ for (const [file, html] of Object.entries(pages)) {
 
   // --- lenker og mediestier ---
   for (const m of html.matchAll(/\s(href|src|poster)="([^"]*)"/g)) {
-    const [, attr, url] = m;
+    const [, attr, raw] = m;
+    if (attr === 'srcset') {
+      for (const part of raw.split(',')) {
+        const u = part.trim().split(/\s+/)[0];
+        if (!resolve(u)) err(file, `død sti i srcset: ${u}`);
+      }
+      continue;
+    }
+    const url = raw;
     if (/^(https?:|mailto:|tel:|data:|\/\/)/.test(url)) continue;
     if (url.startsWith('#')) {
       const id = url.slice(1);
