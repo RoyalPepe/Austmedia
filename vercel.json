@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "austmedia.vercel.app" }],
+      "destination": "https://www.austmedia.no/:path*",
+      "permanent": true
+    }
+  ]
+}
