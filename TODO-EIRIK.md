@@ -59,7 +59,7 @@ Ferdig: casetekstene for Gundersons og Blendzz står på forsiden, `/arbeid/`, c
 - [ ] `/reklamefilm-bodo/` (FAQ): typisk tid fra oppstart til ferdig film
 - [ ] `/videoproduksjon-bodo/`: hvor lenge varer en opptaksdag, hva inngår, hvor mye tid må de ansatte sette av?
 - [ ] `/videoproduksjon-bodo/` (leveranser): teksting inkludert? Typisk leveringstid?
-- [ ] `/bedriftsfoto-bodo/`: antall bilder per fotografering, filformater og oppløsning, leveringstid, tid per ansatt
+- [ ] `/bedriftsfoto-bodo/` (FAQ): tid per ansatt
 - [ ] `/annonsering-bodo/` (FAQ): anbefalt minste annonsebudsjett per måned
 - [ ] `/nettsider-bodo/` (FAQ): typisk tid fra oppstart til ferdig side, og hvordan kunden oppdaterer innhold selv
 
