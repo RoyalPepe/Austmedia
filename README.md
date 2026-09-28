@@ -4,7 +4,7 @@ Statisk nettside. Ingen byggesteg: HTML-filer, `assets/` (CSS/JS) og `media/`.
 Vercel deployer automatisk fra `main`. `vercel.json` gir rene URL-er med skråstrek til slutt.
 
 ## Struktur
-- Hver side ligger i egen mappe: `/priser/index.html` vises som `/priser/`.
+- Hver side ligger i egen mappe: `/om-oss/index.html` vises som `/om-oss/`.
 - Felles stil og skript: `assets/style.css` og `assets/main.js`.
 - Header og footer er like på alle sider. Rediger dem i `scripts/partials/`, ikke i sidene.
 

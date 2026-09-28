@@ -19,17 +19,8 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
       skjemaet noe**. Besøkende ser da en feilmelding med e-post og telefon.
       Innsending går via AJAX og sender til `/takk/` ved suksess.
 
-### Priser
-- [ ] `/priser/`: pris for **Start** (engangs), **Synlig** (fra kr/mnd) og **Vekst** (fra kr/mnd)
-- [ ] `/priser/`: antall reels og bilder i Start, antall reels og innlegg i Synlig
-- [ ] `/priser/`: pris fra-beløp for **reklamefilm**, **bedriftsfoto** og **nettside**
-- [ ] `/priser/`: er prisene inkl. eller eks. mva.?
-- [ ] Forsiden (FAQ): «faste pakker fra [pris] kr i måneden» (laveste månedspakke)
-- [ ] Samme priser gjentas på: `/sosiale-medier-bodo/` (Pakker), `/reklamefilm-bodo/` (teaser + FAQ),
-      `/videoproduksjon-bodo/`, `/bedriftsfoto-bodo/`, `/annonsering-bodo/` (Vekst), `/nettsider-bodo/` (teaser + FAQ)
-
 ### Vilkår (juridisk viktig – ikke gjett)
-- [ ] **Bindingstid**: forsiden (FAQ) og `/priser/` (FAQ)
+- [ ] **Bindingstid**: forsiden (FAQ)
 - [ ] **Bruksrett** for bilder og video: forsiden (FAQ), `/bedriftsfoto-bodo/` (seksjon + FAQ),
       `/videoproduksjon-bodo/` (leveranser + FAQ)
 - [ ] **Musikklisens** og bruksrett for reklamefilm: `/reklamefilm-bodo/` (FAQ)
@@ -68,7 +59,6 @@ Ferdig: casetekstene for Gundersons og Blendzz står på forsiden, `/arbeid/`, c
 
 - [ ] `/sosiale-medier-bodo/` (FAQ): svarer dere på kommentarer og meldinger?
 - [ ] `/reklamefilm-bodo/` (FAQ): typisk tid fra oppstart til ferdig film
-- [ ] `/reklamefilm-bodo/` (FAQ): er teksting inkludert i prisen?
 - [ ] `/videoproduksjon-bodo/`: hvor lenge varer en opptaksdag, hva inngår, hvor mye tid må de ansatte sette av?
 - [ ] `/videoproduksjon-bodo/` (leveranser): teksting inkludert? Typisk leveringstid?
 - [ ] `/bedriftsfoto-bodo/`: antall bilder per fotografering, filformater og oppløsning, leveringstid, tid per ansatt
