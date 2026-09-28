@@ -107,6 +107,7 @@ section:not(.soft):not(.services) .card{background:var(--bg-soft)}
 .card .media img,.card .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card .body{padding:30px;display:flex;flex-direction:column;gap:12px;flex:1}
 .card h3{font-size:24px;font-weight:600}
+.card h3 a{text-decoration:underline;text-underline-offset:4px}
 .card p{font-size:16px}
 .card .more{margin-top:auto;padding-top:6px}
 .featured{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:#fff;border-radius:6px;overflow:hidden}
