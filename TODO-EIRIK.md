@@ -20,10 +20,8 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
       Innsending går via AJAX og sender til `/takk/` ved suksess.
 
 ### Vilkår (juridisk viktig – ikke gjett)
-- [ ] **Bindingstid**: forsiden (FAQ)
-- [ ] **Bruksrett** for bilder og video: forsiden (FAQ), `/bedriftsfoto-bodo/` (seksjon + FAQ),
-      `/videoproduksjon-bodo/` (leveranser + FAQ)
-- [ ] **Musikklisens** og bruksrett for reklamefilm: `/reklamefilm-bodo/` (FAQ)
+- [ ] **Musikklisens** for reklamefilm: avklar hvordan musikk lisensieres. FAQ-spørsmålet
+      «Hva med musikk og rettigheter?» er fjernet fra `/reklamefilm-bodo/` – legg inn igjen når det er avklart.
 - [ ] **Hvem eier annonsekontoen**: `/annonsering-bodo/` (FAQ)
 - [ ] **Råmateriale** – får kunden det? `/videoproduksjon-bodo/` (FAQ)
 - [ ] **Domene og hosting** for nettsider: `/nettsider-bodo/` (FAQ)
