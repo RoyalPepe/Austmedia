@@ -1,13 +1,12 @@
 # TODO for Eirik – før lansering
 
-Alle plassholdere på nettstedet. I HTML er de merket med `<!-- TODO(eirik): … -->`
-og vises på siden som gule `[TODO: …]`-merker. De må fjernes før nettstedet publiseres.
+Gjenstående plassholdere er merket med `<!-- TODO(eirik): … -->` i HTML.
 
 Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
 
-> **Viktig om FAQ:** Flere FAQ-svar er TODO. Når du fyller inn et FAQ-svar, må du
-> oppdatere teksten **både** i `<details>` og i FAQPage-JSON-LD i `<head>` på samme
-> side. Kjør `node scripts/check-site.mjs`. Den melder feil hvis de ikke er like.
+> **Viktig om FAQ:** Når du legger til eller endrer et FAQ-svar, må du oppdatere teksten
+> **både** i `<details>` og i FAQPage-JSON-LD i `<head>` på samme side. Kjør
+> `node scripts/check-site.mjs`. Den melder feil hvis de ikke er like.
 
 ---
 
@@ -19,51 +18,37 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
       skjemaet noe**. Besøkende ser da en feilmelding med e-post og telefon.
       Innsending går via AJAX og sender til `/takk/` ved suksess.
 
-### Vilkår (juridisk viktig – ikke gjett)
+### Vilkår
 - [ ] **Musikklisens** for reklamefilm: avklar hvordan musikk lisensieres. FAQ-spørsmålet
       «Hva med musikk og rettigheter?» er fjernet fra `/reklamefilm-bodo/` – legg inn igjen når det er avklart.
-- [ ] **Hvem eier annonsekontoen**: `/annonsering-bodo/` (FAQ)
-- [ ] **Råmateriale** – får kunden det? `/videoproduksjon-bodo/` (FAQ)
-- [ ] **Domene og hosting** for nettsider: `/nettsider-bodo/` (FAQ)
 
-### Navn
-- [ ] **Bekreft riktig klubbnavn**: «Bodø Golfklubb» er brukt overalt. Det gamle nettstedet
-      skrev også «Ilstad Golfklubb». Gjelder `/`, `/arbeid/`, `/arbeid/bodo-golfklubb/`,
-      `/reklamefilm-bodo/`, `/annonsering-bodo/`
+### Referanser
 - [ ] Sjekk at alle kundene er ok med å bli vist som referanser (logoer og caser)
 
-## 2. Viktig – innhold som gir tillit og rangering
+## 2. Innhold som er fjernet til du har det
+
+Disse feltene var tomme og er fjernet fra sidene. Legg dem inn igjen når du har innholdet
+(husk FAQ-schema for FAQ-spørsmål).
 
 ### Caser
-- [ ] `/arbeid/bodo-golfklubb/`: utfordring, konkrete resultater (tall), sitat med navn og tillatelse
-- [ ] `/arbeid/gundersons/`: **Resultat** (tall, f.eks. visninger, følgervekst eller salg). Seksjonen er fjernet
-      til du har tall. Legg den inn igjen mellom «Hva vi lagde» og «Tjenester brukt».
-- [ ] `/arbeid/gundersons/`: **kundesitat** med navn og tillatelse (seksjonen er fjernet, legges inn sammen med Resultat)
-- [ ] `/arbeid/blendzz/`: **Resultat** (hvordan bildene er brukt, eventuelle tall). Seksjonen er fjernet til du har det.
-- [ ] `/arbeid/blendzz/`: **kundesitat** med navn og tillatelse (seksjonen er fjernet)
-- [ ] Valgfritt: periode for Gundersons-jobben (feltet er fjernet fra casesiden)
-- [ ] `/videoproduksjon-bodo/`: 1–2 setninger om **Lykke Binderi**
-- [ ] `/bedriftsfoto-bodo/`: 1–2 setninger om **Hundefisk**
+- `/arbeid/bodo-golfklubb/`: seksjonen «Utfordringen» (hva klubben ville oppnå), tall/resultater og kundesitat
+- `/arbeid/gundersons/`: «Resultat» (tall) og kundesitat – legges inn mellom «Hva vi lagde» og «Tjenester brukt»
+- `/arbeid/blendzz/`: «Resultat» og kundesitat
+- Valgfritt: periode for Gundersons-jobben
 
-Ferdig: casetekstene for Gundersons og Blendzz står på forsiden, `/arbeid/`, casesidene,
-`/sosiale-medier-bodo/`, `/videoproduksjon-bodo/` og `/bedriftsfoto-bodo/`.
-- [ ] `/nettsider-bodo/`: beskriv nettsidearbeidet for **Hundefisk**, og bekreft at dere faktisk har laget nettsiden deres.
-      Hvis ikke, bytt eksempel eller fjern seksjonen.
+### Tjenestesider
+- `/annonsering-bodo/` (FAQ): «Hvor stort annonsebudsjett trenger vi?» (anbefalt minste budsjett per måned)
+- `/bedriftsfoto-bodo/`: 1–2 setninger om Hundefisk; FAQ «Hvor lang tid tar det per ansatt?»
+- `/nettsider-bodo/` (FAQ): «Hvor lang tid tar det å lage en nettside?», «Kan jeg oppdatere siden selv?», «Hva med domene og hosting?»
+- `/reklamefilm-bodo/` (FAQ): «Hvor lang tid tar det å lage en reklamefilm?»
+- `/sosiale-medier-bodo/` (FAQ): «Svarer dere på kommentarer og meldinger?»
+- `/videoproduksjon-bodo/`: lengde på opptaksdag og hva som inngår; teksting og leveringstid i «Leveranser»;
+  1–2 setninger om Lykke Binderi; FAQ «Hvor mye tid må vi sette av til en opptaksdag?» og «Får vi råmaterialet?»
 
 ### Om oss
-- [ ] `/om-oss/`: kort personlig tekst fra Eirik (bakgrunn, hvorfor du startet, hva du brenner for)
+- `/om-oss/`: kort personlig tekst fra Eirik (bakgrunn, hvorfor du startet, hva du brenner for)
 
-## 3. Detaljer i tjenestene
-
-- [ ] `/sosiale-medier-bodo/` (FAQ): svarer dere på kommentarer og meldinger?
-- [ ] `/reklamefilm-bodo/` (FAQ): typisk tid fra oppstart til ferdig film
-- [ ] `/videoproduksjon-bodo/`: hvor lenge varer en opptaksdag, hva inngår, hvor mye tid må de ansatte sette av?
-- [ ] `/videoproduksjon-bodo/` (leveranser): teksting inkludert? Typisk leveringstid?
-- [ ] `/bedriftsfoto-bodo/` (FAQ): tid per ansatt
-- [ ] `/annonsering-bodo/` (FAQ): anbefalt minste annonsebudsjett per måned
-- [ ] `/nettsider-bodo/` (FAQ): typisk tid fra oppstart til ferdig side, og hvordan kunden oppdaterer innhold selv
-
-## 4. Senere / valgfritt
+## 3. Senere / valgfritt
 
 - [ ] **Drone**: lag bare `/drone-bodo/` hvis du har drone og kompetansebevis fra Luftfartstilsynet.
 - [ ] Legg til Google-bedriftsprofil og lenk den i `sameAs` i organisasjons-schemaet på forsiden.
