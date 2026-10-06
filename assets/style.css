@@ -27,12 +27,8 @@ section{padding:90px var(--pad)}
 
 /* HEADER / NAV */
 .site-header{position:relative;z-index:20;background:var(--ink)}
-body.home .site-header{background:var(--bg);border-bottom:1px solid var(--line)}
+body.home .site-header{position:absolute;top:0;left:0;right:0;background:transparent}
 .nav-logo .logo-dark{display:none}
-body.home .nav-logo .logo-light{display:none}
-body.home .nav-logo .logo-dark{display:block}
-body.home .nav-toggle{color:var(--ink)}
-@media (min-width:941px){body.home .nav-menu>ul{color:var(--ink)}}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px var(--pad)}
 .nav-logo img{height:64px;width:auto}
 .nav-menu>ul{display:flex;align-items:center;gap:36px;list-style:none;margin:0;padding:0;font-size:17px;color:#fff}
@@ -50,17 +46,20 @@ body.home .nav-toggle{color:var(--ink)}
 .nav-toggle{display:none}
 
 /* HERO (forside) */
-.hero{background:var(--bg);padding:64px var(--pad) 96px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:64px;align-items:center}
-.hero-text{display:flex;flex-direction:column;gap:22px}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;line-height:1.1;color:var(--ink)}
-.hero-text p{font-size:clamp(17px,1.6vw,20px);max-width:620px}
+.hero{position:relative;overflow:hidden;min-height:85vh;display:flex;align-items:center;padding:140px var(--pad) 96px;background:#111;color:#fff}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 35%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,0) 180px),linear-gradient(90deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,0) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero-text{display:flex;flex-direction:column;gap:22px;max-width:600px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;line-height:1.1;color:#fff}
+.hero-text p{font-size:clamp(17px,1.6vw,20px);color:#fff}
 .hero .btn-row{justify-content:flex-start;margin-top:8px}
-.hero-figure{width:100%;max-width:420px;justify-self:end;gap:10px}
-.hero-photo{border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-soft)}
-.hero-photo picture{display:block;height:100%}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
-.hero-figure figcaption{font-size:14px;color:var(--muted)}
+.hero .btn-light:hover{background:#E8E8E8}
+.hero .btn-ghost{border:1.5px solid #fff}
+.hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.split .portrait{gap:10px;display:flex;flex-direction:column;margin:0}
+.split .portrait figcaption{font-size:14px;color:var(--muted)}
+.split .portrait img{object-position:50% 25%}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .btn-dark:hover{background:#000}
@@ -243,6 +242,8 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
   .film-grid,.split .wrap,.kontakt .wrap,.page-hero.has-media .wrap{grid-template-columns:1fr;gap:36px}
   .film-grid video,.page-hero .media{max-width:420px;margin:0 auto;width:100%}
   .split .media{aspect-ratio:16/10}
+  .split .portrait{max-width:420px;width:100%}
+  .split .portrait .media{aspect-ratio:4/5}
   .site-footer .grid{grid-template-columns:1fr 1fr}
   .site-footer .grid>div:first-child{grid-column:1/-1}
   .grid3.tab2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -277,9 +278,8 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
   .featured{grid-template-columns:1fr}
   .featured .media{min-height:220px;aspect-ratio:16/10}
   .row,.facts,.case-media{grid-template-columns:1fr}
-  .hero{padding:32px var(--pad) 56px}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-figure{max-width:320px;justify-self:start}
+  .hero{min-height:75vh;align-items:flex-end;padding:120px var(--pad) 48px}
+  .hero::after{background:linear-gradient(0deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,.15) 100%)}
   .hero .btn-row{flex-direction:column;align-items:stretch;width:100%}
   .steps>div{flex-direction:column;gap:2px}
   .site-footer{padding:48px var(--pad) 28px}
@@ -292,4 +292,4 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
 }
 
 /* Fokusmarkering på lys bakgrunn */
-body.home .site-header :focus-visible,.hero :focus-visible,.card :focus-visible,.prose :focus-visible,.faq :focus-visible,.kontakt :focus-visible{outline-color:var(--accent)}
+.card :focus-visible,.prose :focus-visible,.faq :focus-visible,.kontakt :focus-visible{outline-color:var(--accent)}

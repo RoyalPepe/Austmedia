@@ -89,6 +89,19 @@
     Array.prototype.forEach.call(posters, showPoster);
   }
 
+  // Bakgrunnsvideo i heroen: src settes først etter load, så posteren er LCP.
+  // Med redusert bevegelse vises bare posteren.
+  var heroVid = d.querySelector('.hero-video');
+  if (heroVid && !reduce) {
+    var startHero = function () {
+      heroVid.src = heroVid.getAttribute('data-src');
+      var p = heroVid.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    if (d.readyState === 'complete') startHero();
+    else window.addEventListener('load', startHero, { once: true });
+  }
+
   // Kontaktskjema: send via Formspree uten å forlate siden, videresend til /takk/
   var form = d.getElementById('kontaktskjema');
   if (form && window.fetch && window.FormData) {
