@@ -38,7 +38,7 @@ Disse feltene var tomme og er fjernet fra sidene. Legg dem inn igjen når du har
 
 ### Tjenestesider
 - `/annonsering-bodo/` (FAQ): «Hvor stort annonsebudsjett trenger vi?» (anbefalt minste budsjett per måned)
-- `/bedriftsfoto-bodo/`: 1–2 setninger om Hundefisk; FAQ «Hvor lang tid tar det per ansatt?»
+- `/bedriftsfoto-bodo/` (FAQ): «Hvor lang tid tar det per ansatt?»
 - `/nettsider-bodo/` (FAQ): «Hvor lang tid tar det å lage en nettside?», «Kan jeg oppdatere siden selv?», «Hva med domene og hosting?»
 - `/reklamefilm-bodo/` (FAQ): «Hvor lang tid tar det å lage en reklamefilm?»
 - `/sosiale-medier-bodo/` (FAQ): «Svarer dere på kommentarer og meldinger?»
