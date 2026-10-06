@@ -33,7 +33,7 @@ Se `TODO-EIRIK.md` for alt som må fylles inn før lansering.
    og pek DNS hos Domeneshop dit (A/CNAME-verdiene Vercel oppgir).
 
 ## Før lansering
-- Skjemaet: lag konto på formspree.io, bytt FORM_ID i index.html med din egen (se TODO-EIRIK.md).
+- Skjemaet sendes til Formspree (skjema-ID `xdeakelv`, `action` i index.html) via fetch i assets/main.js, og videresender til /takk/.
 - E-post: post@austmedia.no er satt inn – endre hvis adressen blir en annen.
 - Sjekk at kundene er ok med å bli vist som referanser.
 

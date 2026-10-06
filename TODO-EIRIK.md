@@ -12,12 +12,6 @@ Finn alle med: `grep -rn "TODO(eirik)" --include=*.html .`
 
 ## 1. Kritisk – må på plass før lansering
 
-### Kontaktskjema (Formspree)
-- [ ] **Formspree-ID.** Lag et skjema på formspree.io og bytt `FORM_ID` i `index.html`
-      (`action="https://formspree.io/f/FORM_ID"`). Til det er gjort, **sender ikke
-      skjemaet noe**. Besøkende ser da en feilmelding med e-post og telefon.
-      Innsending går via AJAX og sender til `/takk/` ved suksess.
-
 ### Vilkår
 - [ ] **Musikklisens** for reklamefilm: avklar hvordan musikk lisensieres. FAQ-spørsmålet
       «Hva med musikk og rettigheter?» er fjernet fra `/reklamefilm-bodo/` – legg inn igjen når det er avklart.
