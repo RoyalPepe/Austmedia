@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-// Setter inn felles header og footer i alle HTML-sider.
+// Setter inn felles ikonlenker i <head>, header og footer i alle HTML-sider.
 // Kjøres manuelt etter endring i scripts/partials/: node scripts/sync-partials.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, htmlFiles } from './lib.mjs';
 
 const parts = {
+  ICONS: readFileSync(join(ROOT, 'scripts/partials/head-icons.html'), 'utf8').trim(),
   HEADER: readFileSync(join(ROOT, 'scripts/partials/header.html'), 'utf8').trim(),
   FOOTER: readFileSync(join(ROOT, 'scripts/partials/footer.html'), 'utf8').trim(),
 };
