@@ -231,6 +231,7 @@ input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px s
 .marquee-list li img{height:clamp(24px,2.4vw,32px);max-width:100px;
   width:auto;display:block;object-fit:contain}
 .marquee-list li img.boxed{height:clamp(17px,1.8vw,23px);max-width:80px}
+.marquee-list li img.wide{height:clamp(16px,1.6vw,21px);max-width:none}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 
