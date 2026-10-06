@@ -90,16 +90,43 @@
   }
 
   // Bakgrunnsvideo i heroen: src settes først etter load, så posteren er LCP.
-  // Med redusert bevegelse vises bare posteren.
+  // Mindre fil under 760 px. Med redusert bevegelse vises bare posteren.
+  // iOS krever muted + playsinline som properties før src settes. Avvises
+  // autoplay (f.eks. strømsparing), prøves det igjen ved første berøring/scroll.
   var heroVid = d.querySelector('.hero-video');
   if (heroVid && !reduce) {
-    var startHero = function () {
-      heroVid.src = heroVid.getAttribute('data-src');
+    var heroStarted = false;
+    var playHero = function () {
       var p = heroVid.play();
       if (p && p.catch) p.catch(function () {});
     };
+    var startHero = function () {
+      if (heroStarted) return;
+      heroStarted = true;
+      var mobil = window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
+      heroVid.muted = true;
+      heroVid.defaultMuted = true;
+      heroVid.playsInline = true;
+      heroVid.setAttribute('muted', '');
+      heroVid.setAttribute('playsinline', '');
+      heroVid.setAttribute('webkit-playsinline', '');
+      heroVid.src = heroVid.getAttribute(mobil ? 'data-src-mobil' : 'data-src');
+      heroVid.load();
+      playHero();
+      heroVid.addEventListener('canplay', function () { if (heroVid.paused) playHero(); }, { once: true });
+      var retry = function () {
+        if (heroVid.paused) playHero();
+        ['touchstart', 'click', 'scroll'].forEach(function (ev) { window.removeEventListener(ev, retry); });
+      };
+      ['touchstart', 'click', 'scroll'].forEach(function (ev) { window.addEventListener(ev, retry, { passive: true }); });
+      d.addEventListener('visibilitychange', function () { if (!d.hidden && heroVid.paused) playHero(); });
+    };
     if (d.readyState === 'complete') startHero();
-    else window.addEventListener('load', startHero, { once: true });
+    else {
+      window.addEventListener('load', startHero, { once: true });
+      // Reserve hvis load-eventet drøyer (tregt mobilnett)
+      setTimeout(startHero, 4000);
+    }
   }
 
   // Kontaktskjema: send via Formspree uten å forlate siden, videresend til /takk/
