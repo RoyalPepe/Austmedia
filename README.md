@@ -12,6 +12,7 @@ Vercel deployer automatisk fra `main`. `vercel.json` gir rene URL-er med skråst
 - `node scripts/sync-partials.mjs`: kopierer header/footer inn i alle sider
   (mellom `<!-- HEADER:START -->`/`END` og `<!-- FOOTER:START -->`/`END`).
 - `node scripts/build-sitemap.mjs`: lager `sitemap.xml` på nytt (hopper over noindex-sider).
+- `node scripts/indexnow.mjs`: sender alle URL-ene i `sitemap.xml` til IndexNow (Bing m.fl.). Kjøres etter at endringer er deployet. Nøkkelen er `<nøkkel>.txt` i roten. `--dry-run` viser hva som sendes.
 - `node scripts/check-site.mjs --table`: sjekker lenker, H1, alt-tekster, title/description,
   canonical, JSON-LD og at FAQ-schema matcher den synlige FAQ-en.
 
